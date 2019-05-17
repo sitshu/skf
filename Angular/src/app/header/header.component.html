@@ -25,7 +25,7 @@
     <!--header start-->
     <header class="header black-bg">
         <!--logo start-->
-        <a routerLink="/dashboard" class="logo"><img class="img" width="35" height="35" src="/assets/img/logos/logo.svg" alt="Logo" /> Security Knowledge Framework
+        <a routerLink="/dashboard" class="logo"><img class="img" width="35" height="35" src="/assets/img/logos/logo.svg" alt="Logo" /> Shiftleft
             </a>
         <!--logo end-->
         
@@ -49,20 +49,6 @@
                 </div>
             </div>
 
-            <div class="row" class="btn-group theme-container animated">
-                <div ngbDropdown>
-                    <button class="btn btn-default dropdown-toggle user" id="dropdownBasic2" ngbDropdownToggle>
-                        <span class="image"><img src="/assets/img/placeholder-male.jpg" alt="Placeholder" width="250" height="250" /> </span>
-                        <span class="name">
-                            {{user}}
-                        </span>
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownBasic2">
-                        <button (click)="LogOff()" class="dropdown-item"><i class="fa fa-power-off"></i> Logout</button>
-                    </div>
-                </div>
-            </div>
-
         </div>
         
     </header>
@@ -76,33 +62,33 @@
         <div id="sidebar" class="nav-collapse ">
             <!-- sidebar menu start-->
             <ul  class="sidebar-menu" id="nav-accordion">
-                <li [style.background-color]="getProjectStyle()" class="mt sub-menu">
-                    <span *ngIf="projects" class="g"></span>
-                    <a (click)="ProjectsShow()" id="1" class="primairy"  href="javascript:;">
-                        <i class="fa fa-file-code-o"></i>
-                        <span id="1">Projects</span>
-                    </a>
-                    <ul *ngIf="projects" class="sub" id="1" style="display:block;">
-                        <li *ngIf="canEdit"><a routerLink="/project-new" id="1">New Project</a></li>
-                        <li><a routerLink="/project-list" id="1">List Projects</a></li>
-                    </ul>
-                </li>
-                <li *ngIf="canManage" [style.background-color]="getUSerStyle()" class="sub-menu">
-                    <a (click)="UsersShow()" id="2" class="primairy" href="javascript:;">
-                        <i class="fa fa-user"></i>
-                        <span id="2">Users</span>
-                    </a>
-                    <ul *ngIf="users" class="sub" style="display:block;">
-                        <li><a routerLink="/user-add" id="2">Add users</a></li>
-                        <li><a routerLink="/user-manage" id="2">Manage users</a></li>
-                    </ul>
-                </li>
-                <li [style.background-color]="getChecklistStyle()" class="">
-                    <a routerLink="/checklist" (click)="ResetAll(); CheckShow()" id="5" class="primairy">
-                        <i class="fa fa-list-alt"></i>
-                        <span id="5">Checklist</span>
-                    </a>
-                </li>
+<!--                <li [style.background-color]="getProjectStyle()" class="mt sub-menu">-->
+<!--                    <span *ngIf="projects" class="g"></span>-->
+<!--                    <a (click)="ProjectsShow()" id="1" class="primairy"  href="javascript:;">-->
+<!--                        <i class="fa fa-file-code-o"></i>-->
+<!--                        <span id="1">Projects</span>-->
+<!--                    </a>-->
+<!--                    <ul *ngIf="projects" class="sub" id="1" style="display:block;">-->
+<!--                        <li *ngIf="canEdit"><a routerLink="/project-new" id="1">New Project</a></li>-->
+<!--                        <li><a routerLink="/project-list" id="1">List Projects</a></li>-->
+<!--                    </ul>-->
+<!--                </li>-->
+<!--                <li *ngIf="canManage" [style.background-color]="getUSerStyle()" class="sub-menu">-->
+<!--                    <a (click)="UsersShow()" id="2" class="primairy" href="javascript:;">-->
+<!--                        <i class="fa fa-user"></i>-->
+<!--                        <span id="2">Users</span>-->
+<!--                    </a>-->
+<!--                    <ul *ngIf="users" class="sub" style="display:block;">-->
+<!--                        <li><a routerLink="/user-add" id="2">Add users</a></li>-->
+<!--                        <li><a routerLink="/user-manage" id="2">Manage users</a></li>-->
+<!--                    </ul>-->
+<!--                </li>-->
+<!--                <li [style.background-color]="getChecklistStyle()" class="">-->
+<!--                    <a routerLink="/checklist" (click)="ResetAll(); CheckShow()" id="5" class="primairy">-->
+<!--                        <i class="fa fa-list-alt"></i>-->
+<!--                        <span id="5">Checklist</span>-->
+<!--                    </a>-->
+<!--                </li>-->
                 <li [style.background-color]="getKnowledgeStyle()" class="">
                     <a routerLink="/knowledgebase" (click)="ResetAll(); KnowledgeShow()" id="5" class="primairy">
                         <i class="fa fa-book"></i>
