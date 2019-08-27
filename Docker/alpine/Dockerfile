@@ -22,6 +22,9 @@ libstdc++ \
 openblas \
 git
 RUN ln -s /usr/include/locale.h /usr/include/xlocale.h
+RUN apk add --update \
+       ca-certificates \
+    && update-ca-certificates
 RUN git clone https://github.com/sitshu/skf.git
 # Start Angular app
 WORKDIR /skf-flask/Angular
